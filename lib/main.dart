@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'home_screen.dart';
+import 'login.dart';
+import 'signup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,15 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-
-      title: Text('App Hello World'),
-        ),
-        body: Center(
-          child: Text('Hello World'),
-          ),
-      ),
+      home: HomeScreen(),
+      title: 'ISOMO',
+      initialRoute: '/home',
+      routes: {
+        '/home':(context) => HomeScreen(),
+        '/login':(context) => LoginScreen(),
+      },
     );
   }
 }
