@@ -4,8 +4,11 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+<<<<<<< HEAD
 	<key>CFBundleDisplayName</key>
 	<string>Flutter Application 1</string>
+=======
+>>>>>>> 832902c6efaf2492d6bfa53e8d1f5389c238b0d4
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +16,11 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
+<<<<<<< HEAD
 	<string>flutter_application_1</string>
+=======
+	<string>search_bar_app</string>
+>>>>>>> 832902c6efaf2492d6bfa53e8d1f5389c238b0d4
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -41,9 +48,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+<<<<<<< HEAD
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+=======
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+>>>>>>> 832902c6efaf2492d6bfa53e8d1f5389c238b0d4
 </dict>
 </plist>

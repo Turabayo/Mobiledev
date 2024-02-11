@@ -4,6 +4,7 @@
 # This file should be version controlled and should not be manually edited.
 
 version:
+<<<<<<< HEAD
   revision: "ef1af02aead6fe2414f3aafa5a61087b610e1332"
   channel: "stable"
 
@@ -43,3 +44,9 @@ migration:
   unmanaged_files:
     - 'lib/main.dart'
     - 'ios/Runner.xcodeproj/project.pbxproj'
+=======
+  revision: 98a96189937105f51e58e65543e2c6019a82cb33
+  channel: master
+
+project_type: app
+>>>>>>> 832902c6efaf2492d6bfa53e8d1f5389c238b0d4
