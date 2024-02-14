@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
+import 'our.dart';
+
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
   
   
   // This widget is the root of your application.
@@ -15,22 +17,13 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('our community'),
-          body: Center(
-          child: Container(
-            width: 200, 
-            height: 100, 
-            color: Colors.blue,
-        key: newMethod(), 
-            child: Text(
-              'Rectangle',
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white, fontSize: 20)
+        
         ),
       ),
      );
   }
 
-  CommentPage newMethod() => const CommentPage();
+  our community; newMethod() => const our; get community;
 }
 
 class CommentPage extends StatelessWidget {
@@ -78,6 +71,7 @@ class CommentPage extends StatelessWidget {
           SizedBox(height: 10.0),
           
           SizedBox(height: 20.0),
+
           Text(
             'Dahlia flowers can range from small, button-like blooms to large, dinner-plate-sized flowers.',
             style: TextStyle(fontSize: 16.0),
@@ -96,12 +90,4 @@ class CommentPage extends StatelessWidget {
       ),
     );
   }
-
-  // ignore: prefer_const_constructors
-  newMethod() => widget(child: Text('P O S T'));
-  
-  widget({required Text child}) {}
-}
-
-class RaisedButton {
 }
