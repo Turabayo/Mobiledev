@@ -23,11 +23,14 @@ class MyApp extends StatelessWidget {
      );
   }
 
-  our community; newMethod() => const our; get community;
+  our community; newMethod() => const ourcommunity;
 }
 
-class CommentPage extends StatelessWidget {
-  const CommentPage({super.key});
+class our community extends StatelessWidget {
+  const CommentPage({super.key}) {
+   // TODO: implement CommentPage
+   throw UnimplementedError();
+   }
 
   @override
   Widget build(BuildContext context) {
