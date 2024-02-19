@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Search Bar
 
 
@@ -58,3 +59,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+=======
+Project description:
+
+ISOMO is an app that helps individuals explore floriculture by showing different types of flowers. It has 5 main screens. The home/welcome screen, login screen, sign up screen, search screen and community screen.
+
+Link to prototype:
+
+https://www.figma.com/file/BnnMoJbhygLVhJAQesWBxY/ISOMO?type=design&node-id=0%3A1&mode=design&t=bNRsEulHdDCGsJFH-1
+>>>>>>> 9b4dd1b6ad627335d104ee6db8cbf752feb8d438
