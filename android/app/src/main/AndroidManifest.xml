@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
         android:label="flutter_application_1"
@@ -8,6 +10,7 @@
             android:name=".MainActivity"
             android:exported="true"
 =======
+>>>>>>> 9b4dd1b6ad627335d104ee6db8cbf752feb8d438
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.search_bar_app">
    <application
@@ -15,7 +18,10 @@
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
+<<<<<<< HEAD
+=======
 >>>>>>> 832902c6efaf2492d6bfa53e8d1f5389c238b0d4
+>>>>>>> 9b4dd1b6ad627335d104ee6db8cbf752feb8d438
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
@@ -31,6 +37,9 @@
               />
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 9b4dd1b6ad627335d104ee6db8cbf752feb8d438
             <!-- Displays an Android View that continues showing the launch screen
                  Drawable until Flutter paints its first frame, then this splash
                  screen fades out. A splash screen is useful to avoid any visual
@@ -40,7 +49,10 @@
               android:name="io.flutter.embedding.android.SplashScreenDrawable"
               android:resource="@drawable/launch_background"
               />
+<<<<<<< HEAD
+=======
 >>>>>>> 832902c6efaf2492d6bfa53e8d1f5389c238b0d4
+>>>>>>> 9b4dd1b6ad627335d104ee6db8cbf752feb8d438
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

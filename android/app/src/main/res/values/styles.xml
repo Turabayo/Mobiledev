@@ -4,10 +4,14 @@
     <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
         <!-- Show a splash screen on the activity. Automatically removed when
 <<<<<<< HEAD
+             Flutter draws its first frame -->
+=======
+<<<<<<< HEAD
              the Flutter engine draws its first frame -->
 =======
              Flutter draws its first frame -->
 >>>>>>> 832902c6efaf2492d6bfa53e8d1f5389c238b0d4
+>>>>>>> 9b4dd1b6ad627335d104ee6db8cbf752feb8d438
         <item name="android:windowBackground">@drawable/launch_background</item>
     </style>
     <!-- Theme applied to the Android Window as soon as the process has started.
@@ -15,10 +19,14 @@
          Flutter UI initializes, as well as behind your Flutter UI while its
          running.
 <<<<<<< HEAD
+         
+=======
+<<<<<<< HEAD
 
 =======
          
 >>>>>>> 832902c6efaf2492d6bfa53e8d1f5389c238b0d4
+>>>>>>> 9b4dd1b6ad627335d104ee6db8cbf752feb8d438
          This Theme is only used starting with V2 of Flutter's Android embedding. -->
     <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
         <item name="android:windowBackground">?android:colorBackground</item>

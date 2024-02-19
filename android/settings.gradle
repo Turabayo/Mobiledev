@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 pluginManagement {
     def flutterSdkPath = {
         def properties = new Properties()
@@ -29,6 +31,7 @@ plugins {
 
 include ":app"
 =======
+>>>>>>> 9b4dd1b6ad627335d104ee6db8cbf752feb8d438
 include ':app'
 
 def localPropertiesFile = new File(rootProject.projectDir, "local.properties")
@@ -40,4 +43,7 @@ localPropertiesFile.withReader("UTF-8") { reader -> properties.load(reader) }
 def flutterSdkPath = properties.getProperty("flutter.sdk")
 assert flutterSdkPath != null, "flutter.sdk not set in local.properties"
 apply from: "$flutterSdkPath/packages/flutter_tools/gradle/app_plugin_loader.gradle"
+<<<<<<< HEAD
+=======
 >>>>>>> 832902c6efaf2492d6bfa53e8d1f5389c238b0d4
+>>>>>>> 9b4dd1b6ad627335d104ee6db8cbf752feb8d438

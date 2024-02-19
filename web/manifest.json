@@ -1,11 +1,16 @@
 {
 <<<<<<< HEAD
+    "name": "search_bar_app",
+    "short_name": "search_bar_app",
+=======
+<<<<<<< HEAD
     "name": "flutter_application_1",
     "short_name": "flutter_application_1",
 =======
     "name": "search_bar_app",
     "short_name": "search_bar_app",
 >>>>>>> 832902c6efaf2492d6bfa53e8d1f5389c238b0d4
+>>>>>>> 9b4dd1b6ad627335d104ee6db8cbf752feb8d438
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
@@ -24,6 +29,8 @@
             "sizes": "512x512",
             "type": "image/png"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         },
         {
             "src": "icons/Icon-maskable-192.png",
@@ -38,6 +45,7 @@
             "purpose": "maskable"
 =======
 >>>>>>> 832902c6efaf2492d6bfa53e8d1f5389c238b0d4
+>>>>>>> 9b4dd1b6ad627335d104ee6db8cbf752feb8d438
         }
     ]
 }
