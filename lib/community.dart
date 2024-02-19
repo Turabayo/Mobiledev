@@ -24,7 +24,7 @@ class MyWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset('flowers-image.jpg'), // replace with path to your image
+        Image.asset('flowers-image.jpg'), 
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(
