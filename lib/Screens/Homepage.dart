@@ -87,6 +87,19 @@ class StudentSearch extends SearchDelegate<Students> {
                         },
                       ),
                       Divider(),
+                      ListTile(
+                        leading: Image(image: AssetImage('images/begonia.png')
+                            //Icons.person,
+                            //size: 40,
+                            ),
+                        title: Text(listItems[index].name),
+                        //subtitle: Text(
+                        //  "Roll No : ${(listItems[index].id.toString())}"),
+                        onTap: () {
+                          showResults(context);
+                        },
+                      ),
+                      Divider(),
                     ],
                   ));
             });
