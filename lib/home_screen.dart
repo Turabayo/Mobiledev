@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class HomeScreen extends StatelessWidget {
-  final amountController = TextEditingController();
+class HomeScreen extends StatelessWidget{
+  final emailController = TextEditingController();
 
   Future<void> submitData() async {
-    CollectionReference collRef = FirebaseFirestore.instance.collection('income');
-    await collRef.add({'Amount': amountController.text});
-    print('Data submitted successfully');
+    if (emailController.text.isNotEmpty) {
+      CollectionReference collRef = FirebaseFirestore.instance.collection('email');
+      await collRef.add({'Email': emailController.text});
+      print('Data submitted successfully');
+    } else {
+      print('Email cannot be empty');
+    }
   }
 
   @override
@@ -47,8 +51,16 @@ class HomeScreen extends StatelessWidget {
               child: const Text('Go to Login'),
             ),
             const SizedBox(height: 20),
+            TextField(
+              controller: emailController,
+              decoration: InputDecoration(
+                labelText: 'Email',
+              ),
+            ),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
+                print('Submit button pressed');
                 submitData();
               },
               child: const Text('Submit Data'),
