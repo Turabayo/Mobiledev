@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
-import 'signup.dart'; // Import the SignUpScreen file
+import 'package:firebase_auth/firebase_auth.dart';
+import 'signup.dart'; 
+import 'package:firebase_database/firebase_database.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -9,14 +14,32 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
+  bool hasAccount = false;
+  Future<void> loginWthFirebase() async {
+    String emailAddress = _emailController.text;
+    String password = _passwordController.text;
 
-  bool hasAccount = true;
+    
+    try {
+      final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailAddress,
+        password: password
+      );
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        print('No user found for that email.');
+      } else if (e.code == 'wrong-password') {
+        print('Wrong password provided for that user.');
+      }
+    } 
+  }
+  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage( 
             image: AssetImage('assets/ISOMO_BACKGROUND.jpg'),
             fit: BoxFit.cover,
@@ -29,58 +52,24 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             TextField(
               controller: _emailController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Email',
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             TextField(
               controller: _passwordController,
               obscureText: true,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Password',
               ),
             ),
-            SizedBox(height: 32.0),
+            const SizedBox(height: 32.0),
             ElevatedButton(
-              onPressed: () {
-                // Implement login logic here
-                String email = _emailController.text;
-                String password = _passwordController.text;
-
-                // Check if the user has an account
-                if (hasAccount) {
-                  // Add your authentication logic here
-                  // For simplicity, let's just print the username and password for now
-                  print('Username: $email, Password: $password');
-                } else {
-                  // Show a message or navigate to a registration screen for new accounts
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return AlertDialog(
-                        title: Text('Account not found'),
-                        content: Text('Please create an account.'),
-                        actions: [
-                          TextButton(
-                            onPressed: () {
-                              // Navigate to the SignUpScreen
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => SignUpScreen()),
-                              );
-                            },
-                            child: Text('OK'),
-                          ),
-                        ],
-                      );
-                    },
-                  );
-                }
-              },
-              child: Text('Login'),
+              onPressed: loginWthFirebase,
+              child: const Text('Login'),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
                 // Navigate to the SignUpScreen
@@ -89,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   MaterialPageRoute(builder: (context) => SignUpScreen()),
                 );
               },
-              child: Text('Setup Account'),
+              child: const Text('Setup Account'),
             ),
           ],
         ),
