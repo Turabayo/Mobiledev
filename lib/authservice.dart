@@ -14,7 +14,11 @@ class AuthService {
 
       
       if (userCredential.user != null) {
-        await _firestoreService.addUser(userCredential.user!.uid, email);
+        await _firestoreService.addUserData(
+          userCredential.user!.uid, 
+          email,
+          password,
+          );
       }
 
       return userCredential.user;

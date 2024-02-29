@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'signup.dart'; 
-import 'package:firebase_database/firebase_database.dart';
+///import 'package:firebase_database/firebase_database.dart';
 
 
 class LoginScreen extends StatefulWidget {
@@ -14,7 +14,14 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
-  bool hasAccount = false;
+  
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+  
   Future<void> loginWthFirebase() async {
     String emailAddress = _emailController.text;
     String password = _passwordController.text;
