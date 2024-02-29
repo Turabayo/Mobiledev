@@ -1,21 +1,30 @@
 import 'package:flutter/material.dart';
 import 'authservice.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'firestore_service.dart';
+import 'usermanagement.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
-  // ignore: overridden_fields
-  final Key? key;
-  const SignUpScreen({this.key}) : super(key:key);
-  
-  @override
-  // ignore: library_private_types_in_public_api
   _SignUpScreenState createState() => _SignUpScreenState();
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+
+  Future<void> addUserData(String email) async {
+    try {
+      await FirebaseFirestore.instance.collection('table1').add({
+        'email': email,
+        // You may add other fields as needed
+      });
+      print('Data added successfully');
+    } catch (e) {
+      print('Error adding data: $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,10 +61,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   String email = _emailController.text;
                   String password = _passwordController.text;
 
-                  
                   User? user = await AuthService().signUp(email, password);
                   if (user != null) {
                     print("Signed up: ${user.uid}");
+                    // Add user data to Firestore
+                    addUserData(email);
                   } else {
                     print("Signup failed");
                   }

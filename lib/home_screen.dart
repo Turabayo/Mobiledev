@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+///import 'package:cloud_firestore/cloud_firestore.dart';
 
 class HomeScreen extends StatelessWidget {
-  final emailController = TextEditingController();
+  
 
   @override
   Widget build(BuildContext context) {
@@ -40,34 +40,14 @@ class HomeScreen extends StatelessWidget {
               },
               child: const Text('Go to Login'),
             ),
+            ///const SizedBox(height: 20),
+            ///TextField(
+              ///controller: emailController,
+              ///decoration: const InputDecoration(
+                ///labelText: 'Email',
+              ///),
+            ///),
             const SizedBox(height: 20),
-            TextField(
-              controller: emailController,
-              decoration: const InputDecoration(
-                labelText: 'Email',
-              ),
-            ),
-            const SizedBox(height: 20),
-            StreamBuilder(
-              stream: FirebaseFirestore.instance.collection('table1').snapshots(),
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.waiting) {
-                  return const CircularProgressIndicator();
-                } else if (snapshot.hasError) {
-                  return Text('Error: ${snapshot.error}');
-                } else {
-                  return Column(
-                    children: snapshot.data!.docs.map((DocumentSnapshot document) {
-                      Map<String, dynamic> data = document.data() as Map<String, dynamic>;
-                      return ListTile(
-                        title: Text(data['email']),
-                        subtitle: Text(data['password']),
-                      );
-                    }).toList(),
-                  );
-                }
-              },
-            ),
           ],
         ),
       ),

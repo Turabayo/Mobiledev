@@ -1,15 +1,10 @@
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-/**
- *import 'package:firebase_database/firebase_database.dart';
- *import 'package:cloud_firestore/cloud_firestore.dart';
- */
+import 'package:flutter_application_1/usermanagement.dart';
+import 'firestore_service.dart';
 import 'home_screen.dart';
 import 'login.dart';
-/**
- *import 'authservice.dart';
- *import 'firestore_service.dart';
- */
 import 'firebase_options.dart';
 
 void main() async {
@@ -33,7 +28,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home': (context) => HomeScreen(),
         '/login': (context) => const LoginScreen(),
-        ///'/homepage': (context) => MyHomePage(),
+        '/usermanagement': (context) => UserManagementScreen(),
       },
     );
   }
