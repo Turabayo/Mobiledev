@@ -67,11 +67,14 @@ class StudentSearch extends SearchDelegate<Students> {
 
     return listItems.isEmpty
         ? Center(child: Text("No Data Found!"))
-        : ListView.builder(
+        : GridView.builder(
+            gridDelegate:
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
             itemCount: listItems.length,
             itemBuilder: (context, index) {
               return Padding(
-                  padding: const EdgeInsets.only(left: 15.00, right: 15.00),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 0.0, vertical: 0.0),
                   child: Column(
                     children: [
                       ListTile(
@@ -88,7 +91,7 @@ class StudentSearch extends SearchDelegate<Students> {
                       ),
                       Divider(),
                       ListTile(
-                        leading: Image(image: AssetImage('images/begonia.png')
+                        leading: Image(image: AssetImage('images/amaryllis.png')
                             //Icons.person,
                             //size: 40,
                             ),
