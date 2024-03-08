@@ -1,18 +1,15 @@
-# flutter_application_1
+Project description:
 
-A new Flutter project.
+ISOMO is an app that helps individuals explore floriculture by showing different types of flowers. It has 5 main screens. The home/welcome screen, login screen, sign up screen, search screen and community screen.
 
-## Getting Started
+Link to prototype:
 
-This project is a starting point for a Flutter application.
+https://www.figma.com/file/BnnMoJbhygLVhJAQesWBxY/ISOMO?type=design&node-id=0%3A1&mode=design&t=bNRsEulHdDCGsJFH-1
 
-A few resources to get you started if this is your first Flutter project:
+Demo Video for assignment 3 link
+https://drive.google.com/drive/folders/1YTWK6GtlNKyoFsJRyDT9FnQm9stEG40n?usp=sharing
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-## Video Link 
-https://drive.google.com/file/d/12N32lGxhQ66lr0xAzU-brHMFbBDoxhgv/view?usp=sharing
+How our work divided
+victoria did A home page, Sign up and Login ( V-branch)
+Immaculee did A search page (W_branch)
+Amani did A community page ( main )
