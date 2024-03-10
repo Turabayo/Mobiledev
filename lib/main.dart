@@ -1,41 +1,20 @@
+import 'package:firebasetask/community.dart';
 import 'package:flutter/material.dart';
-// ignore: depend_on_referenced_packages
-import 'package:firebase_core/firebase_core.dart';
+import 'community_page.dart'; // Import the community page file
 
-import 'community.dart';
-
-
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: newMethod.currentPlatform,
-  );
-  runApp(const MyApp());
-}
-
-dynamic get newMethod => DefaultFirebaseOptions;
-
-class DefaultFirebaseOptions {
+void main() {
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: newMethod(),
-      title: 'our community',
-      initialRoute: '/community',
-      routes: {
-        '/community': (context) =>  CommunityPage(),
-      },
+      title: 'Community App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: CommunityPage(), // Set the CommunityPage as the home screen
     );
   }
-
-  dynamic newMethod() => HomeScreen();
-}
-
-class HomeScreen {
 }

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "303471457048",
+    "firebase_url": "https://fir-task-6202a-default-rtdb.firebaseio.com",
+    "project_id": "fir-task-6202a",
+    "storage_bucket": "fir-task-6202a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303471457048:android:492c96a2de36e0252ba46d",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYJRmvM321mPLAt-zS7-fYQ6jWRsANwNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
