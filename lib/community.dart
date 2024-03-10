@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class CommunityPage extends StatefulWidget {
   @override
   _CommunityPageState createState() => _CommunityPageState();
