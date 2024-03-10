@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "855862626488",
+    "firebase_url": "https://isomo-7c88a-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "isomo-7c88a",
+    "storage_bucket": "isomo-7c88a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855862626488:android:c701437a1be8a3deac0c4d",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855862626488-ui7rqv764o48f5u9nodht64eeqmcnsu1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi2RAgkIVoh64R6pUyEJmmhgZARyT2USc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855862626488-jgogtlfn14iih44306e01j083lso7st0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

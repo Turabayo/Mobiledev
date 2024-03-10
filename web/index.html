@@ -19,6 +19,7 @@
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
+  <meta name="google-signin-client_id" content="855862626488-ui7rqv764o48f5u9nodht64eeqmcnsu1.apps.googleusercontent.com">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -38,6 +39,32 @@
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js"></script>
+  <script> var firebaseConfig = {
+    apiKey: "AIzaSyCi2RAgkIVoh64R6pUyEJmmhgZARyT2USc" , };
+    firebase.initializeApp(firebaseConfig);
+    </script>
+    <script>
+      // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyA0_UZNSFNOfnrMRvyCsGfmpOh9KOegWJo",
+  authDomain: "isomo-7c88a.firebaseapp.com",
+  databaseURL: "https://isomo-7c88a-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "isomo-7c88a",
+  storageBucket: "isomo-7c88a.appspot.com",
+  messagingSenderId: "855862626488",
+  appId: "1:855862626488:web:6d6dbce8ee0049ddac0c4d"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+    </script>
 </head>
 <body>
   <script>
