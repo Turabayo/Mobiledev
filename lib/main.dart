@@ -1,6 +1,8 @@
+// ignore: depend_on_referenced_packages
 import 'package:firebasetask/community.dart';
 import 'package:flutter/material.dart';
-import 'community_page.dart'; // Import the community page file
+// ignore: depend_on_referenced_packages
+// Import the community page file
 
 void main() {
   runApp(MyApp());
