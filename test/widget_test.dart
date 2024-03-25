@@ -1,30 +1,46 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility that Flutter provides. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:search_bar_app/main.dart';
-
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+  group('ScrollTestingWidget', () {
+    testWidgets(
+      'should not scroll with less items',
+      (WidgetTester tester) async {
+        await tester.pumpWidget(MaterialApp(
+          home: ScrollTestingWidget(
+            listTitles: List.generate(2, (index) => "List $index"),
+          ),
+        ));
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+        await tester.drag(find.byType(ListView), const Offset(0, -300));
+        await tester.pump();
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+        final firstListFinder = find.text("List 0");
+        expect(firstListFinder, findsOneWidget);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+        // Output the current widget tree
+        debugDumpApp();
+      },
+    );
   });
+}
+
+class ScrollTestingWidget extends StatelessWidget {
+  final List<String> listTitles;
+
+  const ScrollTestingWidget({Key? key, required this.listTitles}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: ListView.builder(
+        itemCount: listTitles.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(listTitles[index]),
+          );
+        },
+      ),
+    );
+  }
 }
