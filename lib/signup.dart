@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'authservice.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'firestore_service.dart';
-import 'usermanagement.dart';
+
 
 class SignUpScreen extends StatefulWidget {
+
   @override
   _SignUpScreenState createState() => _SignUpScreenState();
 }
@@ -13,12 +13,11 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
-
+  
   Future<void> addUserData(String email) async {
     try {
       await FirebaseFirestore.instance.collection('table1').add({
         'email': email,
-        // You may add other fields as needed
       });
       print('Data added successfully');
     } catch (e) {
@@ -82,3 +81,4 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 }
+

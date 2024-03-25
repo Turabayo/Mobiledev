@@ -1,4 +1,5 @@
-2024/03/10-15:48:17.986 828 Reusing MANIFEST C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.812fff65\flutter_tools_chrome_device.84a77e9b\Default\Site Characteristics Database/MANIFEST-000001
-2024/03/10-15:48:18.215 828 Recovering log #6
-2024/03/10-15:48:18.220 828 Reusing old log C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.812fff65\flutter_tools_chrome_device.84a77e9b\Default\Site Characteristics Database/000006.log 
-2024/03/10-15:48:18.222 828 Delete type=0 #3
+2024/03/23-16:35:57.375 27e4 Reusing MANIFEST C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.9a7ab494\flutter_tools_chrome_device.4c67f868\Default\Site Characteristics Database/MANIFEST-000001
+2024/03/23-16:35:57.380 27e4 Recovering log #6
+2024/03/23-16:35:57.380 27e4 (ignoring error) C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.9a7ab494\flutter_tools_chrome_device.4c67f868\Default\Site Characteristics Database/000006.log: dropping 85 bytes; Corruption: checksum mismatch
+2024/03/23-16:35:57.380 27e4 Reusing old log C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.9a7ab494\flutter_tools_chrome_device.4c67f868\Default\Site Characteristics Database/000006.log 
+2024/03/23-16:35:57.381 27e4 Delete type=0 #3
