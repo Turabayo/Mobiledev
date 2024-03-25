@@ -6,10 +6,10 @@ Link to prototype:
 
 https://www.figma.com/file/BnnMoJbhygLVhJAQesWBxY/ISOMO?type=design&node-id=0%3A1&mode=design&t=bNRsEulHdDCGsJFH-1
 
-Demo Video for assignment 3 link
-https://drive.google.com/drive/folders/1YTWK6GtlNKyoFsJRyDT9FnQm9stEG40n?usp=sharing
+Demo Video for assignment 6 link
+https://drive.google.com/drive/folders/17PCKOy2kOkm7INP1nxXmX9tI_iwGsF-R?usp=sharing
 
 How our work divided
 victoria did A home page, Sign up and Login ( V-branch)
 Immaculee did A search page (W_branch)
-Amani did A community page ( main )
+Amani did A community page (AC_branch )
