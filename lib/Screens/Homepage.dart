@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:search_bar_app/Repository/SearchItems.dart';
+import 'package:flutter_application_1/Repository/SearchItems.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -11,7 +11,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Floriculture"),
+        title: Text("Here you can search your favorite flower"),    
         actions: [
           IconButton(
             onPressed: () {
@@ -69,14 +69,53 @@ class StudentSearch extends SearchDelegate<Students> {
         ? Center(child: Text("No Data Found!"))
         : GridView.builder(
             gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 5),
             itemCount: listItems.length,
             itemBuilder: (context, index) {
               return Padding(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 0.0, vertical: 0.0),
+                      horizontal: 5.0, vertical: 5.0),
                   child: Column(
                     children: [
+                      ListTile(
+                        leading: Image(image: AssetImage('images/amaryllis.png')
+                            //Icons.person,
+                            //size: 40,
+                            ),
+                        title: Text(listItems[index].name),
+                        //subtitle: Text(
+                        //  "Roll No : ${(listItems[index].id.toString())}"),
+                        onTap: () {
+                          showResults(context);
+                        },
+                      ),
+                      Divider(),
+                      ListTile(
+                      leading: Image(image: AssetImage('images/begonia.png')
+                           //Icons.person,
+                            //size: 40,
+                          ),
+                        title: Text(listItems[index].name),
+                        //subtitle: Text(
+                        //  "Roll No : ${(listItems[index].id.toString())}"),
+                        onTap: () {
+                          showResults(context);
+                        },
+                      ),
+                      Divider(),
+                      ListTile(
+                        leading: Image(image: AssetImage('images/Camelia.jpg')
+                            //Icons.person,
+                            //size: 40,
+                            ),
+                        title: Text(listItems[index].name),
+                        //subtitle: Text(
+                        //  "Roll No : ${(listItems[index].id.toString())}"),
+                        onTap: () {
+                          showResults(context);
+                        },
+                      ),
+                      Divider(),
                       ListTile(
                         leading: Image(image: AssetImage('images/begonia.png')
                             //Icons.person,
@@ -91,7 +130,20 @@ class StudentSearch extends SearchDelegate<Students> {
                       ),
                       Divider(),
                       ListTile(
-                        leading: Image(image: AssetImage('images/amaryllis.png')
+                        leading: Image(image: AssetImage('images/begonia.png')
+                            //Icons.person,
+                            //size: 40,
+                            ),
+                        title: Text(listItems[index].name),
+                        //subtitle: Text(
+                        //  "Roll No : ${(listItems[index].id.toString())}"),
+                        onTap: () {
+                          showResults(context);
+                        },
+                      ),
+                      Divider(),
+                      ListTile(
+                        leading: Image(image: AssetImage('images/begonia.png')
                             //Icons.person,
                             //size: 40,
                             ),

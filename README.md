@@ -12,4 +12,4 @@ https://drive.google.com/drive/folders/1YTWK6GtlNKyoFsJRyDT9FnQm9stEG40n?usp=sha
 How our work divided
 victoria did A home page, Sign up and Login ( V-branch)
 Immaculee did A search page (W_branch)
-Amani did A community page ( main )
+Amani did A community page (AC-branch)

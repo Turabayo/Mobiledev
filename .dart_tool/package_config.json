@@ -218,13 +218,13 @@
       "languageVersion": "3.2"
     },
     {
-      "name": "search_bar_app",
+      "name": "flutter_application_1",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2024-03-23T18:21:39.394337Z",
+  "generated": "2024-03-27T14:08:22.415162Z",
   "generator": "pub",
   "generatorVersion": "3.3.0"
 }

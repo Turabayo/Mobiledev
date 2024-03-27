@@ -1,6 +1,6 @@
 {
-    "name": "search_bar_app",
-    "short_name": "search_bar_app",
+    "name": "flutter_application_1",
+    "short_name": "flutter_application_1",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
