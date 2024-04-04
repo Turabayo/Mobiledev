@@ -28,6 +28,10 @@ flutter:
   assets:
     - assets/ISOMO_LOGO.png
     - assets/ISOMO_BACKGROUND.jpg
+    - assets/begonia.png
+    - assets/amaryllis.png
+    - assets/camelia.jpg
+    
   uses-material-design: true
 
 main: lib/main.dart

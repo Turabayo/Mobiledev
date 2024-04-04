@@ -5,7 +5,9 @@ import 'package:flutter_application_1/usermanagement.dart';
 import 'home_screen.dart';
 import 'login.dart';
 import 'firebase_options.dart';
-
+import 'Communitypage.dart';
+import 'SearchItems.dart';
+import 'homepage.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -28,6 +30,8 @@ class MyApp extends StatelessWidget {
         '/home': (context) => HomeScreen(),
         '/login': (context) =>  const LoginScreen(),
         '/usermanagement': (context) => UserManagementScreen(),
+        '/homepage' :(context) => MyHomePage(),
+        '/communitypage':(context) => CommunityPage(),
       },
     );
   }

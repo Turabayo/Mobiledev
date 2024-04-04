@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_application_1/signup.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:flutter_application_1/homepage.dart';
+///import 'package:flutter_application_1/SearchItems.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -29,6 +32,14 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
+  void navigateToHomePage() {
+   Navigator.push( 
+     context,
+      MaterialPageRoute(builder: (context) => MyHomePage()),
+    );
+  }
+  
+
   // Getter method for email
   String getEmail() {
     return _emailController.text;
@@ -52,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                if (emailCredential.user != null) {
                 print("User sign in successful with email: ${emailCredential.user!.email}");
                 storeUserEmail(emailCredential.user!.email!);
-               }
+                navigateToHomePage(); }
           } else {
             final GoogleSignInAccount? googleUser = 
               await GoogleSignIn(clientId: '.....').signIn();
@@ -70,6 +81,8 @@ class _LoginScreenState extends State<LoginScreen> {
               if (googleCredential.user != null) {
                 print('User sign in successful with Google: ${googleCredential.user!.email}');
                 storeUserEmail(googleCredential.user!.email!);
+                navigateToHomePage();
+                
               } else {
                 print('Google sign-in canceled');
               }
