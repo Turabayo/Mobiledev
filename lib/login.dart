@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_final_fields, avoid_print, library_private_types_in_public_api
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';

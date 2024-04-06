@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/SearchItems.dart';
 import 'package:flutter_application_1/Communitypage.dart';
@@ -12,7 +14,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Here you can search your favorite flower"),   
+        title: Text("Search your favorite flower"),   
         actions: [
           IconButton(
             onPressed: () {
@@ -74,14 +76,14 @@ class StudentSearch extends SearchDelegate<Students> {
         : studentDetails
             .where((element) => element.name
                 .toLowerCase()
-                .startsWith(query.toLowerCase().toString()))
+                .startsWith(query.toLowerCase()))
             .toList();
 
     return listItems.isEmpty
         ? Center(child: Text("No Data Found!"))
         : GridView.builder(
             gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 5),
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 5, crossAxisSpacing: 5.0,mainAxisSpacing: 5.0,),
             itemCount: listItems.length,
             itemBuilder: (context, index) {
               return Padding(
@@ -90,7 +92,7 @@ class StudentSearch extends SearchDelegate<Students> {
                   child: Column(
                     children: [
                       ListTile(
-                        leading: Image(image: AssetImage('images/amaryllis.png')
+                        leading: Image(image: AssetImage('assets/amaryllis.png')
                             //Icons.person,
                             //size: 40,
                             ),
@@ -103,7 +105,7 @@ class StudentSearch extends SearchDelegate<Students> {
                       ),
                       Divider(),
                       ListTile(
-                      leading: Image(image: AssetImage('images/begonia.png')
+                      leading: Image(image: AssetImage('assets/begonia.png')
                            //Icons.person,
                             //size: 40,
                           ),
@@ -116,46 +118,7 @@ class StudentSearch extends SearchDelegate<Students> {
                       ),
                       Divider(),
                       ListTile(
-                        leading: Image(image: AssetImage('images/Camelia.jpg')
-                            //Icons.person,
-                            //size: 40,
-                            ),
-                        title: Text(listItems[index].name),
-                        //subtitle: Text(
-                        //  "Roll No : ${(listItems[index].id.toString())}"),
-                        onTap: () {
-                          showResults(context);
-                        },
-                      ),
-                      Divider(),
-                      ListTile(
-                        leading: Image(image: AssetImage('images/begonia.png')
-                            //Icons.person,
-                            //size: 40,
-                            ),
-                        title: Text(listItems[index].name),
-                        //subtitle: Text(
-                        //  "Roll No : ${(listItems[index].id.toString())}"),
-                        onTap: () {
-                          showResults(context);
-                        },
-                      ),
-                      Divider(),
-                      ListTile(
-                        leading: Image(image: AssetImage('images/begonia.png')
-                            //Icons.person,
-                            //size: 40,
-                            ),
-                        title: Text(listItems[index].name),
-                        //subtitle: Text(
-                        //  "Roll No : ${(listItems[index].id.toString())}"),
-                        onTap: () {
-                          showResults(context);
-                        },
-                      ),
-                      Divider(),
-                      ListTile(
-                        leading: Image(image: AssetImage('images/begonia.png')
+                        leading: Image(image: AssetImage('assets/Camelia.jpg')
                             //Icons.person,
                             //size: 40,
                             ),

@@ -6,8 +6,10 @@ import 'home_screen.dart';
 import 'login.dart';
 import 'firebase_options.dart';
 import 'Communitypage.dart';
-import 'SearchItems.dart';
+///import 'SearchItems.dart';
 import 'homepage.dart';
+
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -31,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) =>  const LoginScreen(),
         '/usermanagement': (context) => UserManagementScreen(),
         '/homepage' :(context) => MyHomePage(),
+        // ignore: prefer_const_constructors
         '/communitypage':(context) => CommunityPage(),
       },
     );
